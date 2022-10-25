@@ -26,11 +26,15 @@ Survived attribute is a boolean which tells us if the person died or not on the 
 
 ### PClass
 
-This is an Integer describing what socio-economic class the passenger is. 
+This is an Integer describing what socio-economic class the passenger is. This would be Lower, Middle and Higher class. 
+1 = Higher
+2 = Middle
+3 = Lower.
 
 ### Name
 
 This is an string, and is the identifier of a person / but not a unique one.
+We can actually get a lot information just in the name, since this was in the 1910s everyone was so polite; in the names they were called Master, miss, mrs, ms and mr. With this information we know if the person is married, young, or unmarried.
 
 ### Sex
 
@@ -42,7 +46,7 @@ This is a float describing the age of the person. Ages below 1 is fractions, res
 
 ### SibSp
 
-This is a Integer describing number of siblings and or spouse is onboard.
+This is a Integer describing number of siblings and spouse is onboard.
 
 ### Parch
 
