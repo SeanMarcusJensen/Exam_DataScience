@@ -80,3 +80,6 @@ This is a Character describing where the passenger mounted from. People embarked
 - See Corr between Age and Survived.
 - See Corr between SibSp and Survived: Might be harder for one to get all its siblings aboard emergency boat; and therefore die himself.
 - See Corr between Parch
+- Pie-plot on Embarked.
+- See Corr on Fare and Embarked.
+
