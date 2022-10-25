@@ -10,10 +10,58 @@
 
 **Part 1 Answer**
 
-
 We know this data set is an overview of who died on the titanic; the data contains information describing each person. E.g., Age, name, gender and which cabin on the ship they were assigned.
 
 When starting out analyzing the data set, I'll start with checking out how the data looks and what types it contains. We have integers, floats and objects; All of which is strings.
 
 Getting to the context, the attributes are:
-- PassengerId; Which is a integer. I do not really understand why they had its own id, when everyone 
+
+### PassengerId
+PassengerID is a integer. It is used as indexing for the passengers. To all fairness, I feel like this is redundant for us, and I'll probably drop this in further analyzing.
+
+I would prefer to use ticket as an unique identifier because it should be, but when looking closer at that attribute, I clearly see that its not.
+
+if we use we can clearly see that there are duplicates.
+```python
+dataframe['Ticker'].duplicate()
+```
+
+### Survived
+Survived attribute is a boolean which tells us if the person died or not on the titanic.
+
+### Pclass
+
+This is an Integer describing what socio-economic class the passenger is. 
+
+### Name
+
+This is an string, and is the identifier of a person / but not a unique one.
+
+### Sex
+
+This is a string saying what kind of gender the person has.
+
+### Age
+
+This is a float describing the age of the person. Ages below 1 is fractions, rest is not.
+
+### SibSp
+
+This is a Integer describing number of siblings and or spouse is onboard.
+
+### Parch
+
+This is a Integer describing number of parents/children onboard.
+
+### Ticket
+
+This is a string, and is 
+
+### Fare
+
+
+### Cabin
+
+
+### Embarked
+
