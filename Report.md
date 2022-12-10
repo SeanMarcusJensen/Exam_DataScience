@@ -6,9 +6,7 @@
 
 ### Part 1 Question
 
-*What kind of data set is this?*
-
-### Part 1 Answer
+> What kind of data set is this?
 
 We know this data set is an overview of who died on the titanic; the data contains information describing each person. E.g., Age, name, gender and which cabin on the ship they were assigned.
 
@@ -70,6 +68,29 @@ this is a string, and is an unique ID for the cabin the passenger is staying in.
 ### Embarked
 
 This is a Character describing where the passenger mounted from. People embarked from  Southampton, Cherbourg, and Queenstown hence the chars C, S and Q.
+
+## Task 2
+
+> What can you use this data set for? Name at least 2 different applications, or examples of getting value out of the data set.
+
+### Application / Example 1
+
+Based on Sosio-economic status(Pclass), Fare and Embarkment we can analyze the wealth of each citys population, and from there decide what type of products to display on onboarding. Also if we should be more exclusive on onboarding - to accomodate the wealthier families.
+
+When doing this, the sales of products will be sold more effectivitly; wealthier persons might be able to purchase champaign, wheras more economic unstable families can only purchase beers.
+
+This analyzis can also be used for other application than cruises - like cities can use this analyzis to increase prices of wares etc.
+
+### Application / Example 2
+
+## Task 2b
+
+the data need some processing. Cabin - has alot of missing values(over 60%) and since this is 'unique' its really hard for me to find values for it, We could try to map persons by name and ticket to make sense of cabin, and then fill those values - but since both my applications does not have any use of cabin, I will exclude this.
+
+When it comes to age, theres alot of missing values there as well, but I could do some mean calculations and fill those values.
+
+And Embarked is missing 2 values, which vill we definantly filled with the highes 2.
+I could ofc do some more advanced inserts to this, and calculate the fare and pclass, and get embarked from those in same the same category. but I do not feel like the trouble is worth it for 2 values.
 
 ## TODOS
 
