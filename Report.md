@@ -93,15 +93,3 @@ When it comes to age, theres alot of missing values there as well, but I could d
 
 And Embarked is missing 2 values, which vill we definantly filled with the highes 2.
 I could ofc do some more advanced inserts to this, and calculate the fare and pclass, and get embarked from those in same the same category. but I do not feel like the trouble is worth it for 2 values.
-
-## TODOS
-
----
-
-- See Corr between PClass and Survived.
-- See Corr between Cabin and Survived.
-- See Corr between Age and Survived.
-- See Corr between SibSp and Survived: Might be harder for one to get all its siblings aboard emergency boat; and therefore die himself.
-- See Corr between Parch
-- Pie-plot on Embarked.
-- See Corr on Fare and Embarked.
