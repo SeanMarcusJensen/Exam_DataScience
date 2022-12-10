@@ -83,6 +83,8 @@ This analyzis can also be used for other application than cruises - like cities 
 
 ### Application / Example 2
 
+We can take a look at number of parents / children (Parch) and see if larger families death rate is larger than lonely passengers, and therefor place larger families where there are more escapeboats / better evacuation possibilities.
+
 ## Task 2b
 
 the data need some processing. Cabin - has alot of missing values(over 60%) and since this is 'unique' its really hard for me to find values for it, We could try to map persons by name and ticket to make sense of cabin, and then fill those values - but since both my applications does not have any use of cabin, I will exclude this.
