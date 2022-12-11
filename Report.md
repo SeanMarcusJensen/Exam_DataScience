@@ -91,5 +91,8 @@ the data need some processing. Cabin - has alot of missing values(over 60%) and 
 
 When it comes to age, theres alot of missing values there as well, but I could do some mean calculations and fill those values.
 
-And Embarked is missing 2 values, which vill we definantly filled with the highes 2.
+And Embarked is missing 2 values, which will we definantly filled with the highes 2.
 I could ofc do some more advanced inserts to this, and calculate the fare and pclass, and get embarked from those in same the same category. but I do not feel like the trouble is worth it for 2 values.
+
+### TODO:
+The five basic methods are mean, standard deviation, regression, hypothesis testing, and sample size determination.
