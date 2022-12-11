@@ -83,7 +83,7 @@ This analyzis can also be used for other application than cruises - like cities 
 
 ### Application / Example 2
 
-We can take a look at number of parents / children (Parch) and see if larger families death rate is larger than lonely passengers, and therefor place larger families where there are more escapeboats / better evacuation possibilities.
+We can take a look at number of parents & children (Parch) and see if larger families death rate is larger than lonely passengers, and therefor place larger families where there are more escapeboats / better evacuation possibilities.
 
 ## Task 2b
 
