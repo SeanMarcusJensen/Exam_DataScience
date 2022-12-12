@@ -44,7 +44,13 @@ This is a string saying what kind of gender the person has.
 
 This is a float describing the age of the person. Ages below 1 is fractions, rest is not.
 
-### SibSp
+### SibSp .
+
+Seaborn ahas a usefull tool/plot called seaborn, which will scatterplot each attribute and make histogram - giving a lot of information in one plot.
+
+I will also use scatter plots to see the correlation between two attributes.
+
+Hopefully I'll find some clusters.  
 
 This is a Integer describing number of siblings and spouse is onboard.
 
@@ -71,6 +77,7 @@ This is a Character describing where the passenger mounted from. People embarked
 
 ## Task 2
 
+### 2a
 > What can you use this data set for? Name at least 2 different applications, or examples of getting value out of the data set.
 
 ### Application / Example 1
@@ -85,7 +92,7 @@ This analyzis can also be used for other application than cruises - like cities 
 
 We can take a look at number of parents & children (Parch) and see if larger families death rate is larger than lonely passengers, and therefor place larger families where there are more escapeboats / better evacuation possibilities.
 
-## Task 2b
+### 2b
 
 the data need some processing. Cabin - has alot of missing values(over 60%) and since this is 'unique' its really hard for me to find values for it, We could try to map persons by name and ticket to make sense of cabin, and then fill those values - but since both my applications does not have any use of cabin, I will exclude this.
 
@@ -94,5 +101,40 @@ When it comes to age, theres alot of missing values there as well, but I could d
 And Embarked is missing 2 values, which will we definantly filled with the highes 2.
 I could ofc do some more advanced inserts to this, and calculate the fare and pclass, and get embarked from those in same the same category. but I do not feel like the trouble is worth it for 2 values.
 
+## Task 3
+
+### 3a
+
+> What methods would I apply to the dataset?
+
+First of all, I would start with 'Sample Size determination', this is to evaluate if the dataset is sufficent. Too large of a dataset is unnecessary ( which I would not think the case is here. ), and too small of a dataset would be unscientific, but in this case it's all I have.
+
+Samplesize is determened by: (z^2 x p(1-p)) / e^2 
+where:
+- e = margin of error
+- z = z-score
+- p = Standard deviation
+
+
+To analyze the first applcation (Product). I would start with finding the mean and standard deviation pclass, fare and embarked to get some sense in where most people lay.
+
+I would need to know if most people are middle-class and how spread they are. The same for fare and embarked, it will be very interessting to see if the Fare is very spread. I would think it is, because the cabins would vary in price based on quality and size - meaning, smaller families can do with smaller cabins, and larger families with larger cabins. Yet, families of 2 could also pay as much as larger families because of cabin quality and PClass. This will be exiting to see when starting the analyzis.
+
+Comming to visualizations I'm going to use corr_heatmap to see the correlation between the different attributes. this is quite useful to see how the different attributes correlate / affect eachother. 
+
+I'm also going to use histograms / barplots to get a better look into different attributes alone. its quite usefull to analyze one attribute. ( Embarked will be one of them, and PClass ).
+
+Seaborn has a usefull tool/plot called seaborn, which will scatterplot each attribute and make histogram - giving a lot of information in one plot.
+
+I will also use scatter plots to see the correlation between two attributes.
+
+It would be cool to use clustering on this kind of dataset, to see if we could find any clusters saying if its efficient to place pricy products on onboarding or not.
+
 ### TODO:
 The five basic methods are mean, standard deviation, regression, hypothesis testing, and sample size determination.
+
+Standard Deviation: is the method of evaluating if the dataset is spread. the closer to 0 the std is, the closer the data is to the mean. if the data is higher, it is more spread.
+
+Mean: is average og data set. sum / count
+
+Regression: Process of estimationg the relationship of one dependent variable and one or more independent variables.
