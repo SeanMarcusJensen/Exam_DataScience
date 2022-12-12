@@ -75,6 +75,10 @@ this is a string, and is an unique ID for the cabin the passenger is staying in.
 
 This is a Character describing where the passenger mounted from. People embarked from  Southampton, Cherbourg, and Queenstown hence the chars C, S and Q.
 
+### Family (Self made)
+
+It is interessing to see the whole family as one column, so I'll add this as one numeric value to the dataset.
+
 ## Task 2
 
 ### 2a
