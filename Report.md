@@ -79,6 +79,11 @@ This is a Character describing where the passenger mounted from. People embarked
 
 It is interessing to see the whole family as one column, so I'll add this as one numeric value to the dataset.
 
+### Traveling_Alone (self made)
+
+Using family as operator here, checking if its 0 then assigning this attribute.
+Its binary
+
 ## Task 2
 
 ### 2a
