@@ -40,7 +40,6 @@ One interesting aspect of the data is the size of each passenger's family. To be
 
 Another interesting aspect of the data is whether or not a passenger was traveling alone. To explore this, I will create a new column called 'Traveling_Alone' that will be a binary value indicating whether a passenger was traveling without any family members. This can be determined by checking if the 'Family' column has a value of 0.
 
-
 ## Task 2
 
 ### 2a
@@ -56,15 +55,11 @@ One potential analysis of the data is to examine the relationship between the si
 
 ### 2b
 
-To improve the quality of the data, some processing will be necessary. The 'Cabin' column has a large number of missing values (over 60%), and it is difficult to find values for this column. One possible solution would be to fill nan-values with 'Unknown' this will preserve the rows with missing data, while still indicating that the values represent a distinct category of data.
+To improve the quality of the data, some processing will be necessary. The 'Cabin' column has a large number of missing values (over 60%), and it is difficult to find values for this column. One possible solution would be to map persons by name and ticket to try to make sense of the cabin data, and then fill in the missing values using this information. However, since the applications that will be using the data do not require cabin information, it may be more efficient to simply exclude the cabin column from the dataset.
 
+The 'Age' column also has a large number of missing values, but these can be filled in using mean calculations. The 'Embarked' column is missing only two values, which can be filled in with the most common values in that column.
 
-the data need some processing. Cabin - has alot of missing values(over 60%) and since this is 'unique' its really hard for me to find values for it, We could try to map persons by name and ticket to make sense of cabin, and then fill those values - but since both my applications does not have any use of cabin, I will exclude this.
-
-When it comes to age, theres alot of missing values there as well, but I could do some mean calculations and fill those values.
-
-And Embarked is missing 2 values, which will we definantly filled with the highes 2.
-I could ofc do some more advanced inserts to this, and calculate the fare and pclass, and get embarked from those in same the same category. but I do not feel like the trouble is worth it for 2 values.
+Alternatively, more advanced techniques could be used to fill in the missing values in the 'Embarked' column. For example, one could calculate the fare and passenger class (Pclass) for each passenger, and then use this information to infer the likely embarkation point for each passenger. This approach would require more time and effort, however, and may not be worth the trouble for only two missing values.
 
 ## Task 3
 
