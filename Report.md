@@ -127,6 +127,9 @@ where:
 
 To analyze the first applcation (Product). I would start with finding the mean and standard deviation pclass, fare and embarked to get some sense in where most people lay.
 
+One way to do analyzis of the dataset is to use ANOVA Test / this is a test to determine if there are any significant diffrences between means of two or more groups. 
+This can be then used on Survived and age.
+
 I would need to know if most people are middle-class and how spread they are. The same for fare and embarked, it will be very interessting to see if the Fare is very spread. I would think it is, because the cabins would vary in price based on quality and size - meaning, smaller families can do with smaller cabins, and larger families with larger cabins. Yet, families of 2 could also pay as much as larger families because of cabin quality and PClass. This will be exiting to see when starting the analyzis.
 
 Comming to visualizations I'm going to use corr_heatmap to see the correlation between the different attributes. this is quite useful to see how the different attributes correlate / affect eachother. 
@@ -139,6 +142,8 @@ I will also use scatter plots to see the correlation between two attributes.
 
 It would be cool to use clustering on this kind of dataset, to see if we could find any clusters saying if its efficient to place pricy products on onboarding or not.
 
+
+
 ### TODO:
 The five basic methods are mean, standard deviation, regression, hypothesis testing, and sample size determination.
 
@@ -147,3 +152,4 @@ Standard Deviation: is the method of evaluating if the dataset is spread. the cl
 Mean: is average og data set. sum / count
 
 Regression: Process of estimationg the relationship of one dependent variable and one or more independent variables.
+
