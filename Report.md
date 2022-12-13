@@ -8,81 +8,38 @@
 
 > What kind of data set is this?
 
-We know this data set is an overview of who died on the titanic; the data contains information describing each person. E.g., Age, name, gender and which cabin on the ship they were assigned.
+This dataset is an overview of the passengers who died on the Titanic. The data contains information about each person, such as their age, name, gender, and which cabin on the ship they were assigned.
 
-When starting out analyzing the data set, I'll start with checking out how the data looks and what types it contains. We have integers, floats and objects; All of which is strings.
+To begin analyzing the data, I will first take a look at the overall structure and content of the dataset. The data includes columns of different types, including integers, floats, and objects (which are strings). By understanding the types of data that are included in the dataset, it will be possible to determine which methods and techniques are most appropriate for analyzing the data.
 
-Getting to the context, the attributes are:
+The 'PassengerId' column is an integer that is used as an index for the passengers in the dataset. This information is not particularly useful for analyzing the data, and can be dropped from the dataset during the analysis process.
 
-### PassengerId
+The 'Survived' column is a boolean that indicates whether or not a passenger survived the Titanic disaster. This is an important piece of information that will be used to analyze the data and identify any patterns or trends.
 
-PassengerID is a integer. It is used as indexing for the passengers. To all fairness, I feel like this is redundant for us, and I'll probably drop this in further analyzing.
+The 'PClass' column is an integer that indicates the socio-economic class of the passenger. There are three possible values for this column: 1 (for higher class), 2 (for middle class), and 3 (for lower class). This information can be used to understand the demographics of the passengers on the Titanic, and how this may have affected their chances of survival.
 
-I would prefer to use ticket as an unique identifier because it should be, but when looking closer at that attribute, I clearly see that its not.
+The 'Name' column is a string that contains the name of the passenger. This information can be used to identify the gender and marital status of the passenger, based on the title that is included in their name (e.g. "Miss", "Mrs", "Mr", etc.). This can provide additional context for the analysis of the data.
 
-### Survived
+The 'Sex' column is a string that indicates the gender of the passenger. This information can be used to understand the distribution of males and females on the Titanic, and how this may have affected their survival rates.
 
-Survived attribute is a boolean which tells us if the person died or not on the titanic.
+The 'Age' column is a float that indicates the age of the passenger. Fractional ages below 1 are represented as decimal values in this column. This information can be used to understand the distribution of ages on the Titanic, and how age may have affected the survival rates of the passengers.
 
-### PClass
+The 'SibSp' column is an integer that indicates the number of siblings and spouses that a passenger had on board the Titanic. This information can be used to understand the demographics of the passengers on the Titanic, and how this may have affected their chances of survival.
 
-This is an Integer describing what socio-economic class the passenger is. This would be Lower, Middle and Higher class.
-1 = Higher
-2 = Middle
-3 = Lower.
+The 'Parch' column is an integer that indicates the number of parents and children that a passenger had on board the Titanic. This information can be used to understand the demographics of the passengers on the Titanic, and how this may have affected their chances of survival.
 
-### Name
+The 'Ticket' column is a string that contains the ticket number for each passenger. This information could potentially be used as a unique identifier for each passenger, since it is unlikely that two passengers would have the same ticket number. However, it is possible that multiple passengers within a family may have been assigned the same ticket number.
 
-This is an string, and is the identifier of a person / but not a unique one.
-We can actually get a lot information just in the name, since this was in the 1910s everyone was so polite; in the names they were called Master, miss, mrs, ms and mr. With this information we know if the person is married, young, or unmarried.
+The 'Fare' column is a float that indicates the price that a passenger paid for their ticket on the Titanic. It is likely that the prices were similar for passengers in the same socio-economic class, but there may be some differences based on factors such as where the ticket was purchased or the tax laws in the passenger's home state.
 
-### Sex
+The 'Cabin' column is a string that contains a unique identifier for the cabin that a passenger was assigned on the Titanic. This identifier is not unique for each passenger, as multiple passengers may have been assigned the same cabin.
 
-This is a string saying what kind of gender the person has.
+The 'Embarked' column is a character that indicates the port from which a passenger boarded the Titanic. There are three possible values for this column: 'C' (for Cherbourg), 'S' (for Southampton), and 'Q' (for Queenstown). This information can be used to understand the distribution of passengers on the Titanic, and how this may have affected their chances of survival.
 
-### Age
+One interesting aspect of the data is the size of each passenger's family. To better understand this, I will create a new column called 'Family' that combines the 'SibSp' and 'Parch' columns to give a single numeric value for the number of siblings, spouses, parents, and children that a passenger was traveling with.
 
-This is a float describing the age of the person. Ages below 1 is fractions, rest is not.
+Another interesting aspect of the data is whether or not a passenger was traveling alone. To explore this, I will create a new column called 'Traveling_Alone' that will be a binary value indicating whether a passenger was traveling without any family members. This can be determined by checking if the 'Family' column has a value of 0.
 
-### SibSp .
-
-Seaborn ahas a usefull tool/plot called seaborn, which will scatterplot each attribute and make histogram - giving a lot of information in one plot.
-
-I will also use scatter plots to see the correlation between two attributes.
-
-Hopefully I'll find some clusters.  
-
-This is a Integer describing number of siblings and spouse is onboard.
-
-### Parch
-
-This is a Integer describing number of parents/children onboard.
-
-### Ticket
-
-This is a string, and is the ticket. I Would prefer to use this as a unique identifier; since one can only have one Ticket per person ( as this gives more sense ). But I assume one family might board on one common ticket.
-
-### Fare
-
-this is a float, and is the price the passenger paid for its ticket onboard the titanic.
-I would assume there was mostly the same prices for each PClass; but it might be a difference coming from where the passenger bought the ticket - if it was on sale or if the state the passenger lived in has different taxes?
-
-### Cabin
-
-this is a string, and is an unique ID for the cabin the passenger is staying in. This is not unique id(UID) for each passenger, but an UID for the cabin. Multiple passengers can have the same cabin UID.
-
-### Embarked
-
-This is a Character describing where the passenger mounted from. People embarked from  Southampton, Cherbourg, and Queenstown hence the chars C, S and Q.
-
-### Family (Self made)
-
-It is interessing to see the whole family as one column, so I'll add this as one numeric value to the dataset.
-
-### Traveling_Alone (self made)
-
-Using family as operator here, checking if its 0 then assigning this attribute.
-Its binary
 
 ## Task 2
 
@@ -91,17 +48,16 @@ Its binary
 
 ### Application / Example 1
 
-Based on Sosio-economic status(Pclass), Fare and Embarkment we can analyze the wealth of each citys population, and from there decide what type of products to display on onboarding. Also if we should be more exclusive on onboarding - to accomodate the wealthier families.
-
-When doing this, the sales of products will be sold more effectivitly; wealthier persons might be able to purchase champaign, wheras more economic unstable families can only purchase beers.
-
-This analyzis can also be used for other application than cruises - like cities can use this analyzis to increase prices of wares etc.
+One potential use for the data in this dataset is to analyze the socio-economic status of passengers based on their passenger class ('Pclass'), the price of their ticket ('Fare'), and their point of embarkment ('Embarked'). By examining these factors, we can gain insight into the wealth of each city's population and make more informed decisions about what products to offer and how to target potential customers. For example, we could use this information to determine if we should be more exclusive in our onboarding process to better accommodate wealthier families, or if we should offer a wider range of products at different price points to cater to a broader range of customers. This type of analysis could also be useful in other contexts, such as cities using it to determine how to price goods and services.
 
 ### Application / Example 2
 
-We can take a look at number of parents & children (Parch) and see if larger families death rate is larger than lonely passengers, and therefor place larger families where there are more escapeboats / better evacuation possibilities.
+One potential analysis of the data is to examine the relationship between the size of a passenger's family and their chances of survival. By comparing the number of parents and children (as indicated by the 'Parch' column) with the 'Survived' column, we can determine if larger families had a higher or lower death rate than passengers who were traveling alone. This information could be used to make more informed decisions about where to place larger families during an evacuation, such as ensuring that they have access to more escape boats or other safety measures.
 
 ### 2b
+
+To improve the quality of the data, some processing will be necessary. The 'Cabin' column has a large number of missing values (over 60%), and it is difficult to find values for this column. One possible solution would be to fill nan-values with 'Unknown' this will preserve the rows with missing data, while still indicating that the values represent a distinct category of data.
+
 
 the data need some processing. Cabin - has alot of missing values(over 60%) and since this is 'unique' its really hard for me to find values for it, We could try to map persons by name and ticket to make sense of cabin, and then fill those values - but since both my applications does not have any use of cabin, I will exclude this.
 
@@ -116,40 +72,17 @@ I could ofc do some more advanced inserts to this, and calculate the fare and pc
 
 > What methods would I apply to the dataset?
 
-First of all, I would start with 'Sample Size determination', this is to evaluate if the dataset is sufficent. Too large of a dataset is unnecessary ( which I would not think the case is here. ), and too small of a dataset would be unscientific, but in this case it's all I have.
+To begin the analysis of the given dataset, the first step would be to familiarize myself with the data by exploring the variable names, data types, and any missing or invalid values, as done above. This would help me understand the structure and content of the data, and identify any potential issues or inconsistencies that may affect the analysis.
 
-Samplesize is determened by: (z^2 x p(1-p)) / e^2 
-where:
-- e = margin of error
-- z = z-score
-- p = Standard deviation
+After that, I would perform any necessary data cleaning and preprocessing steps, such as removing missing or invalid values, transforming or scaling the data, or combining multiple variables into a single variable and / or 
+doing encoding. This would ensure that the data is in a suitable form for analysis and that any potential issues or biases are minimized.
 
+Once the data is prepared, I would begin the actual analysis by applying appropriate statistical methods and visualizations to explore and analyze the data. This would typically involve calculating descriptive statistics, such as mean, median and mode.
 
-To analyze the first applcation (Product). I would start with finding the mean and standard deviation pclass, fare and embarked to get some sense in where most people lay.
+The chosen application aims to save lives by analyzing the death rate of families and using this information to improve evacuation planning. By analyzing the number of parents and children (Parch) in the dataset, and comparing this information to the survival rates of passengers, it may be possible to identify patterns that can be used to plan more effective evacuations. This could include placing larger families in areas of the ship with more escape boats, or ensuring that there are enough lifeboats available to accommodate all passengers, regardless of their family size. By applying these methods to the data, the chosen application can help to improve the safety of passengers in the event of an emergency.
 
-One way to do analyzis of the dataset is to use ANOVA Test / this is a test to determine if there are any significant diffrences between means of two or more groups. 
-This can be then used on Survived and age.
+First of all, I would first calculate the number of passengers who had a certain number of parents or children on board, lets call this column familiy, as well as the number of passengers who survived in each of those groups.
 
-I would need to know if most people are middle-class and how spread they are. The same for fare and embarked, it will be very interessting to see if the Fare is very spread. I would think it is, because the cabins would vary in price based on quality and size - meaning, smaller families can do with smaller cabins, and larger families with larger cabins. Yet, families of 2 could also pay as much as larger families because of cabin quality and PClass. This will be exiting to see when starting the analyzis.
+Next, I will calculate the survival rate for each group of passengers with a certain number of family members on board. This could be done by dividing the number of passengers who survived in a group by the total number of passengers in that group.
 
-Comming to visualizations I'm going to use corr_heatmap to see the correlation between the different attributes. this is quite useful to see how the different attributes correlate / affect eachother. 
-
-I'm also going to use histograms / barplots to get a better look into different attributes alone. its quite usefull to analyze one attribute. ( Embarked will be one of them, and PClass ).
-
-Seaborn has a usefull tool/plot called seaborn, which will scatterplot each attribute and make histogram - giving a lot of information in one plot.
-
-I will also use scatter plots to see the correlation between two attributes.
-
-It would be cool to use clustering on this kind of dataset, to see if we could find any clusters saying if its efficient to place pricy products on onboarding or not.
-
-
-
-### TODO:
-The five basic methods are mean, standard deviation, regression, hypothesis testing, and sample size determination.
-
-Standard Deviation: is the method of evaluating if the dataset is spread. the closer to 0 the std is, the closer the data is to the mean. if the data is higher, it is more spread.
-
-Mean: is average og data set. sum / count
-
-Regression: Process of estimationg the relationship of one dependent variable and one or more independent variables.
-
+Once the survival rates have been calculated, I will plot them on a graph to visualize any patterns or trends in the data. For example, if the survival rate was higher for larger families, this could suggest that larger families had a better chance of surviving the disaster.
