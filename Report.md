@@ -59,8 +59,6 @@ To improve the quality of the data, some processing will be necessary. The 'Cabi
 
 The 'Age' column also has a large number of missing values, but these can be filled in using mean calculations. The 'Embarked' column is missing only two values, which can be filled in with the most common values in that column.
 
-Alternatively, more advanced techniques could be used to fill in the missing values in the 'Embarked' column. For example, one could calculate the fare and passenger class (Pclass) for each passenger, and then use this information to infer the likely embarkation point for each passenger. This approach would require more time and effort, however, and may not be worth the trouble for only two missing values.
-
 ## Task 3
 
 ### 3a
