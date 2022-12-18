@@ -83,3 +83,15 @@ Once the survival rates have been calculated, I will plot them on a graph to vis
 One potential approach to analyzing the data would be to use statistical methods and visualizations to understand the relationship between family size and survival. This approach would allow us to examine the strength and significance of the relationship between these variables, without the need to build a predictive model. Instead of using a machine learning algorithm, we could compute measures of association such as the Pearson correlation coefficient or use a chi-square test to determine whether there is a significant relationship between family size and survival. We could also create visualizations of the data, such as bar charts or scatterplots, to help us identify trends or patterns in the data.
 
 While building a machine learning model may also be a useful way to analyze the data, it may not be the best approach in this case. Since the goal is to understand the relationship between family size and survival in order to inform decisions about evacuation procedures, a more descriptive approach may be more suitable. By using statistical methods and visualizations, we can gain a better understanding of the characteristics of the data and identify any patterns or trends that may be present. This information can then be used to inform decisions about how to best protect larger families during an evacuation.
+
+
+## Task 4
+
+### 4a
+
+> What did you get out of the data? Show concrete numbers, figures and graphs.
+
+There are some 
+
+## TOOLS
+You'll find all libraries used in 'requirements.txt'. 
