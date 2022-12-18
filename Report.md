@@ -95,6 +95,7 @@ When examining the scatter plots of age and family size, it is clear that the ag
 
 When examining the Pclass of both groups, it is clear that there are more individuals from the lower class in the deceased group. The mean Pclass of the deceased group is above 2.5, indicating that there were mostly middle to lower class individuals. The standard deviation of Pclass for the deceased group is 0.7, indicating that the spread is not as large. In comparison, the mean Pclass of the survived group is below 2, indicating that it was mostly higher to middle class individuals that survived. The histogram for Pclass for both groups shows that there were mostly lower class individuals that died, while both middle and higher class had fewer individuals. In the survived group, higher class individuals had the highest survival rate, with 62% surviving. These percentages of Pclass survival in the survived group are 47% for middle class and 24% for lower class.
 
+Based on the analysis, it can be concluded that age, family, sex, and pclass had a significant impact on survival rate.
 
 ## TOOLS
 You'll find all libraries used in 'requirements.txt'. 
