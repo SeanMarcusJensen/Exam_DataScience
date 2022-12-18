@@ -87,19 +87,22 @@ While building a machine learning model may also be a useful way to analyze the 
 
 ## Task 4
 
-### 4a
+### 4a / b
 
 > What did you get out of the data? Show concrete numbers, figures and graphs.
 
 When examining the scatter plots of age and family size, it is clear that the age of the deceased group is substantially higher than that of the survived group. Additionally, the deceased group has larger families and is younger on average. This can be seen in the histograms for both groups, where there are more younger individuals in the survived group. When looking at the mean, skew, and standard deviation of age for both groups, it is apparent that the numbers are lower for the survived group. A t-test of the correlation between these two variables shows a significant relationship between them.
 
-When examining the Pclass of both groups, it is clear that there are more individuals from the lower class in the deceased group. The mean Pclass of the deceased group is above 2.5, indicating that there were mostly middle to lower class individuals. The standard deviation of Pclass for the deceased group is 0.7, indicating that the spread is not as large. In comparison, the mean Pclass of the survived group is below 2, indicating that it was mostly higher to middle class individuals that survived. The histogram for Pclass for both groups shows that there were mostly lower class individuals that died, while both middle and higher class had fewer individuals. In the survived group, higher class individuals had the highest survival rate, with around 60% surviving. These percentages of Pclass survival in the survived group are 47% for middle class and 24% for lower class.
+When examining the Pclass of both groups, it is clear that there are more individuals from the lower class in the deceased group. The mean Pclass of the deceased group is above 2.5, indicating that there were mostly middle to lower class individuals. The standard deviation of Pclass for the deceased group is 0.7, indicating that the spread is not as large. In comparison, the mean Pclass of the survived group is below 2, indicating that it was mostly higher to middle class individuals that survived. The histogram for Pclass for both groups shows that there were mostly lower class individuals that died, while both middle and higher class had fewer individuals. In the survived group, higher class individuals had the highest survival rate, with 62% surviving. These percentages of Pclass survival in the survived group are 47% for middle class and 24% for lower class.
+
 ```
 Pclass
 1    62.962963
 2    47.282609
 3    24.236253
 ```
+
+
 
 ## TOOLS
 You'll find all libraries used in 'requirements.txt'. 
